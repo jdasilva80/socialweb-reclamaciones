@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="componentes/layout :: head"></head>
+
+<body>
+
+	<header th:replace="componentes/layout :: header"></header>
+	
+	<div class="container py-4">
+
+		<div class="card bg-light">
+		
+			<div class="card-header" th:text="${titulo}"></div>
+			
+			<div class="card-body">
+			
+				<div class="card-title" >
+					<a th:href="@{/api/socialweb-reclamaciones/reclamaciones/form}" class="btn btn-success  btn-xs">Crear reclamación</a>
+				</div>
+				
+				<table class="table table-striped">
+		
+					<thead>
+						<th>ID</th>
+						<th>PETICION</th>
+						<th>USERNAME</th>
+						<th>EMAIL</th>
+						<th>FECHA</th>
+						<th>PRIORIDAD</th>
+						<th>EDITAR</th>
+						<th>ELIMINAR</th>
+					</thead>
+		
+					<tbody>
+						<tr th:each="reclamacion : ${reclamaciones}">
+							<td th:text="${reclamacion.id}"></td>
+							<td th:text="${reclamacion.peticion}"></td>
+							<td th:text="${reclamacion.username}"></td>
+							<td th:text="${reclamacion.email}"></td>
+							<td th:text="${reclamacion.fecha}"></td>
+							<td th:text="${reclamacion.prioridad.descripcion}"></td>
+							<td>
+								<a class="btn btn-primary btn-xs" th:href="@{/api/socialweb-reclamaciones/reclamaciones/form/} + ${reclamacion.id}" th:text="'editar'"> </a>
+							</td>
+							<td>
+								<a class="btn btn-danger btn-xs" th:href="@{/api/socialweb-reclamaciones/reclamaciones/eliminar/} + ${reclamacion.id}" th:text="eliminar" 
+										onclick="confirm('Desea eliminar el registro?')"> </a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<nav th:replace="componentes/paginator-nav :: paginator"></nav>
+			</div>
+		</div>
+	</div>
+	
+	<footer th:replace="componentes/layout :: footer"></footer>
+	
+</body>
+</html>

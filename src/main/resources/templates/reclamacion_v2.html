@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+
+	<h3 th:text="${titulo}"></h3>
+
+	<form th:action="@{/api/socialweb-reclamaciones/reclamaciones-v2/form}" method="post">
+
+		<div>
+			<label for="username">Username</label>
+			<div>
+				<input type="text" name="username" th:value="${reclamacion.username}">
+			</div>
+
+			<div th:if="${errors!=null && errors.containsKey('username')}" th:text="${errors.username}"></div>
+		</div>
+
+		<div>
+			<label for="email">Email</label>
+			<div>
+				<input type="email" name="email" th:value="${reclamacion.email}">
+			</div>
+			<div th:if="${errors!=null && errors.containsKey('email')}" th:text="${errors.email}"></div>
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<div>
+				<input type="password" name="password">
+			</div>
+			<div th:if="${errors!=null && errors.containsKey('password')}"	th:text="${errors.password}"></div>
+		</div>
+
+		<div>
+			<label for="descripcion">Descripción</label>
+			<div>
+				<input type="text" name="descripcion"
+					style="width: 50%; height: 50px" th:value="${reclamacion.descripcion}">
+			</div>
+			<div th:if="${errors!=null && errors.containsKey('descripcion')}" th:text="${errors.descripcion}"></div>
+		</div>
+
+		<div>
+			<input type="submit" value="enviar"></input>
+		</div>
+	</form>
+
+</body>
+</html>

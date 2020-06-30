@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="componentes/layout :: head"></head>
+
+<body>
+
+	<div class="container">
+	
+		<section th:fragment="interceptor" class="container mb-4 mt-2">
+
+			<div th:if="${tiempoTranscurrido != null }">
+			
+				<span class="alert alert-success"
+					th:text="${horarioMensaje} +', El tiempo transcurrido en milisegundos es : '+ ${tiempoTranscurrido}"></span>
+			</div>
+
+		</section>
+	</div>
+
+</body>
+</html>

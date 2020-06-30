@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:replace="componentes/layout :: head"></head>
+
+<body>
+	<div>
+		<header th:replace="componentes/layout :: header"></header>
+	</div>
+	<div>
+		<section th:replace="componentes/tiempo :: interceptor"></section>
+	</div>
+	<div class="container py-2">
+	
+		<a th:href="@{/api/socialweb-reclamaciones/reclamaciones/listar}" class="btn btn-success btn-lg mb-2">Volver</a>
+		
+		<div class="card bg-light">
+		
+			<div class="card-header" th:text="${titulo}"></div>
+			
+			<div class="card-body">	
+	
+				<!--  
+				<div>
+					<img th:alt="${reclamacion.archivo}" th:src="@{'/api/socialweb-reclamaciones/uploads/' + ${reclamacion.archivo}}"
+							
+						style="max-width: 25%; max-height: 25%" class="img-thumbnail rounded float-left py-3">
+				</div>-->				
+				<div>
+					<img th:alt="${reclamacion.archivo}" th:src="@{'/api/socialweb-reclamaciones/reclamaciones/uploads/' + ${reclamacion.archivo}}"
+							
+						style="max-width: 25%; max-height: 25%" class="img-thumbnail rounded float-left py-3">
+				</div>
+				
+				<ul class="list-group">
+				
+					<li class="list-group-item active" th:text="'Datos reclamación'"></li>
+		
+					<li class="list-group-item" th:text="'Reibir mail de su reclamación interpuesta: ' +${reclamacion.enviarMail}"></li>
+					<li class="list-group-item" th:text="'tipo de reclamación : ' +${reclamacion.tipo.descripcion}"></li>
+					<li class="list-group-item" th:text="${reclamacion.prioridad.descripcion}"></li>
+					<li class="list-group-item" th:text="${reclamacion.motivo.descripcion}"></li>
+					<li class="list-group-item" th:text="${reclamacion.username}"></li>
+					<li class="list-group-item" th:text="${usuario.nombre}"></li>
+					<li class="list-group-item" th:text="${usuario.apellidos}"></li>
+					<li class="list-group-item" th:text="${reclamacion.email}"></li>
+					<li class="list-group-item" th:text="${reclamacion.descripcion}"></li>
+					<li class="list-group-item" th:text="${reclamacion.fecha}"></li>
+					<li class="list-group-item" th:text="${reclamacion.id}"></li>
+					<li class="list-group-item" th:text="${#dates.format(reclamacion.fechaReclamacion,'yyyy-MM-dd')}"></li>
+				</ul>
+		
+				<ul class="list-group my-2">
+					<li class="list-group-item active" th:text="'opciones'"></li>
+					<li class="list-group-item" th:each="opcion: ${reclamacion.opciones}" th:text="${opcion.id} +' : '+${opcion.descripcion}"></li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	
+	<footer th:replace="componentes/layout :: footer"></footer>
+	
+</body>
+</html>
