@@ -1,12 +1,12 @@
 package com.jdasilva.socialweb.reclamaciones.app;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class SocialwebReclamacionesApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 
