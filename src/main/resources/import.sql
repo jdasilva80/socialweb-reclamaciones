@@ -18,15 +18,13 @@ INSERT INTO tipos(descripcion) values('tipo 2');
 INSERT INTO tipos(descripcion) values('tipo 3');
 INSERT INTO tipos(descripcion) values('tipo 4');
 
-INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci贸n 1', '123.123,a', 'jdasilva1980', 'jdasilva@gmail.com', '17-03-20', '17-03-20', 1, 1, 1, 1, 1, '')
-INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci贸n 2', '123.123,b', 'rosamaria67', 'rosa67@gmail.com', '12-01-20', '12-01-20', 2, 0, 2, 2, 2, '')
-INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci贸n 3', '123.123,c', 'jdasilva1980', 'jdasilva@gmail.com', '12-01-20', '12-01-20', 2, 0, 3, 3, 3, '')
-INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci贸n 4', '123.123,d', 'rosamaria67', 'rosa67@gmail.com', '12-01-20', '12-01-20', 2, 2, 0, 4, 4, 4, '')
-INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci贸n 5', '123.123,e', 'jdasilva1980', 'jdasilva@gmail.com', '12-01-20', '12-01-20', 2, 0, 1, 1, 1, '')
-INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci贸n 6', '123.123,f', 'rosamaria67', 'rosa67@gmail.com', '12-01-20', '12-01-20', 2, 0, 2, 2, 2, '')
-INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci贸n 7', '123.123,g', 'jdasilva1980', 'jdasilva@gmail.com', '12-01-20', '12-01-20', 2, 0, 3, 3, 3, '')
-
-
+INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci髇 1', '123.123,a', 'jdasilva1980', 'jdasilva@gmail.com', '17-03-20', '17-03-20', 1, 1, 1, 1, 1, '')
+INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci髇 2', '123.123,b', 'rosamaria67', 'rosa67@gmail.com', '12-01-20', '12-01-20', 2, 0, 2, 2, 2, '')
+INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci髇 3', '123.123,c', 'jdasilva1980', 'jdasilva@gmail.com', '12-01-20', '12-01-20', 2, 0, 3, 3, 3, '')
+INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci髇 4', '123.123,d', 'rosamaria67', 'rosa67@gmail.com', '12-01-20', '12-01-20', 2, 2, 0, 4, 4, 4, '')
+INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci髇 5', '123.123,e', 'jdasilva1980', 'jdasilva@gmail.com', '12-01-20', '12-01-20', 2, 0, 1, 1, 1, '')
+INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci髇 6', '123.123,f', 'rosamaria67', 'rosa67@gmail.com', '12-01-20', '12-01-20', 2, 0, 2, 2, 2, '')
+INSERT INTO reclamaciones(descripcion, peticion, username, email, fecha_reclamacion, fecha, num_localizador, enviar_mail, motivo_id, prioridad_id, tipo_id, archivo ) VALUES ('Reclamaci髇 7', '123.123,g', 'jdasilva1980', 'jdasilva@gmail.com', '12-01-20', '12-01-20', 2, 0, 3, 3, 3, '')
 
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(1,1);
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(1,3);
@@ -38,7 +36,7 @@ INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(3,1);
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(3,2);
 
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(4,1);
-INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(4,0);
+INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(4,3);
 
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(5,1);
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(5,2);
@@ -46,5 +44,5 @@ INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(5,2);
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(6,1);
 INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(6,3);
 
-INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(7,1);
-INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(7,2);
+--INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(7,1);
+--INSERT INTO reclamaciones_opciones(reclamacion_id, opcion_id) values(7,2);
