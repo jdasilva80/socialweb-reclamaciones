@@ -23,7 +23,7 @@ import com.jdasilva.socialweb.reclamaciones.models.service.IUsuarioService;
 public class ReclamacionesController_v2 {
 
 	@Autowired
-	@Qualifier("usuarioRestService")
+	@Qualifier("usuarioRestService2")
 	IUsuarioService usuarioService;
 
 	@GetMapping("/form")

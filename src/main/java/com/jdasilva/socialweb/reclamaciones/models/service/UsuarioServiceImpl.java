@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.jdasilva.socialweb.commons.models.entity.Usuario;
 
-@Service("usuarioRestService")
+@Service("usuarioRestService2")
 public class UsuarioServiceImpl implements IUsuarioService {
 
 	@Autowired

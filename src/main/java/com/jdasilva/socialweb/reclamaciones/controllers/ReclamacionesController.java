@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -71,7 +72,7 @@ public class ReclamacionesController {
 	private static final Logger logger = LoggerFactory.getLogger(ReclamacionesController.class);
 
 	@Autowired
-	@Qualifier("usuarioRestService")
+	@Qualifier("usuarioRestService2")
 	private IUsuarioService usuarioService;
 
 	@Autowired
@@ -369,7 +370,7 @@ public class ReclamacionesController {
 			usuario = usuarioService.findByUsernameOptional(reclamacion.getUsername())
 					.orElseThrow(() -> new UsuarioNoEncontrado(reclamacion.getUsername()));
 
-		} catch (FeignException e) {
+		} catch (FeignException | RestClientException e) {
 
 			throw new UsuarioNoEncontrado(reclamacion.getUsername());
 		}
