@@ -23,7 +23,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
 		pathVariables.put("username", username);
 
 		Usuario usuario = clienteRest.getForObject(
-				"https://soyjose-usuarios.herokuapp.com/usuarios/search/buscar-nombre/{username}", Usuario.class,
+				"https://soyjose-usuarios.herokuapp.com/usuarios/username/{username}", Usuario.class,
 				pathVariables);
 
 		return usuario;
@@ -36,7 +36,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
 		pathVariables.put("username", username);
 
 		Usuario usuario = clienteRest.getForObject(
-				"https://soyjose-usuarios.herokuapp.com/usuarios/search/buscar-nombre/{username}", Usuario.class,
+				"https://soyjose-usuarios.herokuapp.com/usuarios/username/{username}", Usuario.class,
 				pathVariables);
 
 		return Optional.ofNullable(usuario);
