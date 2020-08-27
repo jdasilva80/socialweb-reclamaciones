@@ -33,6 +33,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.multipart.MultipartFile;
@@ -383,6 +384,12 @@ public class ReclamacionesController {
 
 		return "resumen";
 	}
+		
+	@GetMapping(value = { "/prueba" })
+	public @ResponseBody Integer cargarProductosXml() {
+
+		return 1;
+	}
 
 	@ModelAttribute("reclamacion")
 	public Reclamacion createReclamacion() {
@@ -426,6 +433,7 @@ public class ReclamacionesController {
 
 		return tipoService.findAll();
 	}
+
 
 //	@ModelAttribute("prioridades")
 //	public Map<Integer, String> prioridad() {
