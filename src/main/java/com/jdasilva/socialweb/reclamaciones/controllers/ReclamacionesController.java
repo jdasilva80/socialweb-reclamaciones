@@ -40,8 +40,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jdasilva.socialweb.commons.errors.UsuarioNoEncontrado;
-import com.jdasilva.socialweb.commons.models.entity.Mensaje;
-import com.jdasilva.socialweb.commons.models.entity.Usuario;
+import com.jdasilva.socialweb.commons.models.usuarios.entity.Mensaje;
+import com.jdasilva.socialweb.commons.models.usuarios.entity.Usuario;
 import com.jdasilva.socialweb.reclamaciones.editors.MayusculasEditor;
 import com.jdasilva.socialweb.reclamaciones.editors.MotivosEditor;
 import com.jdasilva.socialweb.reclamaciones.editors.OpcionEditor;
@@ -73,7 +73,8 @@ public class ReclamacionesController {
 	private static final Logger logger = LoggerFactory.getLogger(ReclamacionesController.class);
 
 	@Autowired
-	@Qualifier("usuarioRestService2")
+	//@Qualifier("usuarioRestService2")	
+	@Qualifier("usuarioFeingService")
 	private IUsuarioService usuarioService;
 
 	@Autowired

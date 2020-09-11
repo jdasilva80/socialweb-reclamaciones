@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jdasilva.socialweb.commons.models.entity.Usuario;
+import com.jdasilva.socialweb.commons.models.usuarios.entity.Usuario;
 import com.jdasilva.socialweb.reclamaciones.models.domain.Reclamacion;
 import com.jdasilva.socialweb.reclamaciones.models.service.IUsuarioService;
 

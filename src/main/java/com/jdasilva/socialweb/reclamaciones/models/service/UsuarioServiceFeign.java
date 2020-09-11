@@ -5,10 +5,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jdasilva.socialweb.commons.models.entity.Usuario;
+import com.jdasilva.socialweb.commons.models.usuarios.entity.Usuario;
 import com.jdasilva.socialweb.reclamaciones.clientsrest.UsuariosClienteRestFeign;
 
-@Service("usuariofeingService")
+@Service("usuarioFeingService")
 public class UsuarioServiceFeign implements IUsuarioService {
 
 	@Autowired(required = false)
