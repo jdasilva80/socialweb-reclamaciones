@@ -73,8 +73,8 @@ public class ReclamacionesController {
 	private static final Logger logger = LoggerFactory.getLogger(ReclamacionesController.class);
 
 	@Autowired
-	//@Qualifier("usuarioRestService2")	
-	@Qualifier("usuarioFeingService")
+	@Qualifier("usuarioRestService2")	
+	//@Qualifier("usuarioFeingService")
 	private IUsuarioService usuarioService;
 
 	@Autowired
